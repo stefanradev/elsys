@@ -1,0 +1,21 @@
+
+<div>
+<% if current_user %>
+Signed in as <strong><%= current_user.name %></strong>!
+<%= link_to "Sign out", signout_path, id: "sign_out" %>
+<% else %>
+<%= link_to "Sign in with Twitter", "/auth/twitter", id: "sign_in" %>
+<% end %>
+</br>
+<%= link_to "Sign in with Facebook", '/auth/facebook' %>
+</br>
+<strong><%= link_to "Instagram Feed", "/instagram/index" %></strong>
+
+</div>
+
+<% if !current_user.nil? %>
+    <p>Click The link below to send a tweet.</p>
+    <%= link_to "Send a Tweet", new_tweet_path %>
+<% else %>
+    <p>You must log in first.</p>
+<% end %>
