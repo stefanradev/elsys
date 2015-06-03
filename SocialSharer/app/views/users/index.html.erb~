@@ -1,0 +1,4 @@
+<%= link_to "Facebook Login", '/auth/facebook' %>
+</br>
+<%= link_to "Twitter Login", '/auth/twitter' %> 
+<%= link_to "Instagram Feed", "/instagram/index" %>
