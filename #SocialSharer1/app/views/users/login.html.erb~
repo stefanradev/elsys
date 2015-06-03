@@ -1,0 +1,6 @@
+<p>
+  <%= form_for :post,url: auth_facebook_callback_path,method: :post do |f| %>
+    <%= f.text_field :message %><br />
+    <%= f.submit "Post!" %>
+  <% end %>
+</p>
